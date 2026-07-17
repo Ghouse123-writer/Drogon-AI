@@ -1,0 +1,254 @@
+Drogon AI Assistant 🐉
+Complete Setup and Usage Guide
+
+Drogon is a personal AI assistant written in Python. It can listen to your voice, accept typed commands, open applications, search the internet, and generate Model UN speeches using OpenAI. This guide explains every step from installation to daily use.
+
+What Drogon Can Do
+
+After setup, Drogon can:
+
+Wake up when you say "Hello"
+Accept text commands
+Open Chrome, YouTube, Spotify, Notepad, Calculator, Paint, and Command Prompt
+Open Documents, Downloads, and Desktop folders
+Search Google
+Search YouTube
+Generate MUN opening speeches using OpenAI
+Save generated speeches into a file called speech.txt
+Step 1: Install Python 3.12
+Open the Microsoft Store.
+Search for Python 3.12.
+Install the 64-bit version.
+After installation, open Command Prompt and type:
+py -3.12 --version
+
+You should see something like:
+
+Python 3.12.x
+
+If you see that version number, Python is installed correctly.
+
+Step 2: Create the Project Folder
+Open File Explorer.
+Go to Documents.
+Create a new folder named:
+Drogon-AI
+
+Inside this folder, you will place all project files.
+
+Step 3: Create the Main Python File
+Open Notepad.
+Paste the full drogon.py code that was provided.
+Click File → Save As.
+Choose the Drogon-AI folder.
+File name:
+drogon.py
+Change Save as type to All Files (.).
+Save the file.
+Step 4: Create requirements.txt
+Open Notepad again.
+Paste:
+openai
+SpeechRecognition
+pyttsx3
+pyaudio
+Save it as:
+requirements.txt
+
+inside the Drogon-AI folder.
+
+Step 5: Install All Required Libraries
+
+Open Command Prompt and run:
+
+cd %USERPROFILE%\Documents\Drogon-AI
+py -3.12 -m pip install -r requirements.txt
+
+Wait until all packages finish installing.
+
+Step 6: Get Your OpenAI API Key
+Go to https://platform.openai.com
+Sign in with your OpenAI account.
+Open API Keys.
+Click Create new secret key.
+Copy the key immediately.
+
+It will look similar to:
+
+sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+Never share this key publicly.
+
+Step 7: Store the API Key Securely
+
+In Command Prompt, run:
+
+setx OPENAI_API_KEY "your_actual_api_key_here"
+
+Replace your_actual_api_key_here with your real key.
+
+After running the command:
+
+Close Command Prompt completely.
+Open a new Command Prompt window.
+
+This makes the API key available to Drogon without putting it inside the code.
+
+Step 8: Run Drogon
+
+In Command Prompt:
+
+cd %USERPROFILE%\Documents\Drogon-AI
+py -3.12 drogon.py
+
+Drogon will start and ask:
+
+Choose mode (voice/text):
+Step 9: Using Text Mode
+
+Type:
+
+text
+
+Then you can enter commands directly.
+
+Examples:
+
+open chrome
+open youtube
+open spotify
+search latest AI news
+youtube python tutorial
+speech cyber warfare and international security
+exit
+
+This mode is useful when testing new features.
+
+Step 10: Using Voice Mode
+
+Type:
+
+voice
+
+Drogon will say:
+
+Voice mode activated. Say Hello to wake me up.
+Example Conversation
+
+You:
+
+Hello
+
+Drogon:
+
+Drogon awakened. What do you command?
+
+You:
+
+Open Chrome
+
+Drogon will open Chrome.
+
+Available Voice Commands
+Applications
+Open Chrome
+Open YouTube
+Open Spotify
+Open Notepad
+Open Calculator
+Open Paint
+Open CMD
+Folders
+Open Documents
+Open Downloads
+Open Desktop
+System
+Lock PC
+Sleep
+Exit
+Web Search
+Search artificial intelligence
+Search latest MUN resolutions
+YouTube Search
+YouTube Python tutorial
+YouTube lofi music
+Speech Generation
+Speech democracy and digital governance
+Speech cyber warfare and international security
+Speech climate refugees
+How Speech Generation Works
+
+When you say:
+
+Speech cyber warfare and international security
+
+Drogon will:
+
+Send the topic to OpenAI.
+Ask for a 90-second MUN opening speech.
+Display the speech in the terminal.
+Save it as:
+speech.txt
+
+inside the Drogon-AI folder.
+
+You can open that file later and copy the speech for your conference.
+
+Troubleshooting
+Microphone Not Working
+
+Check:
+
+Windows Settings → System → Sound → Input
+Make sure the correct microphone is selected.
+Increase input volume to 80–100%.
+"OpenAI API key not found"
+
+Run:
+
+setx OPENAI_API_KEY "your_key_here"
+
+Then restart Command Prompt.
+
+PyAudio Installation Error
+
+Use Python 3.12 and run:
+
+py -3.12 -m pip install pyaudio
+Voice Recognition Mishears Words
+
+Speak clearly and keep the microphone about 15–20 cm from your mouth.
+
+Uploading to GitHub
+Repository Name
+Drogon-AI
+Repository Description
+A personal Python AI assistant with voice control, text commands, web search, app launching, and AI-powered MUN speech generation.
+Upload Steps
+Create a new GitHub repository named Drogon-AI.
+Upload:
+drogon.py
+README.md
+requirements.txt
+Commit the files.
+Add topics:
+python ai-assistant speech-recognition openai desktop-assistant automation mun
+Final Project Structure
+Drogon-AI/
+│
+├── drogon.py
+├── README.md
+├── requirements.txt
+└── speech.txt (created automatically)
+What You Have Built
+
+By completing this setup, you have created a real desktop AI assistant that can:
+
+Listen to voice commands
+Accept typed commands
+Control applications
+Search the internet
+Generate MUN speeches using AI
+Save generated content automatically
+
+This is a strong beginner-to-intermediate Python project and a good portfolio project for GitHub, especially for someone interested in AI, automation, and Model United Nations. 🐉💻
