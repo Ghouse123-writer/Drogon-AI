@@ -1,0 +1,3 @@
+py -3.12 -m pip install -r requirements.txt
+setx OPENAI_API_KEY "your_api_key_here"
+py -3.12 drogon.py
